@@ -1,0 +1,54 @@
+<!-- Google Code for Ticket Purchase Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var transTotal = parseFloat(document.getElementsByClassName('price')[0].innerHTML.replace(/[^0-9\.]+/g,''));
+    var google_conversion_id = 961560365;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "-ff1CJbIwGMQrf7AygM";
+    var google_conversion_value = transTotal;
+    var google_conversion_currency = "USD";
+    var google_remarketing_only = false;
+});
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/961560365/?value=1.00&amp;currency_code=USD&amp;label=-ff1CJbIwGMQrf7AygM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+if ( document.addEventListener ) {
+    document.addEventListener( "DOMContentLoaded", function() {
+        var data = TFPUR.receiptData;
+        ga('create', 'UA-56806935-1', 'auto', {'trackingId': 'gmf', 'allowLinker': true});
+        ga('require', 'ec', 'gmf');
+        ga('require', 'linker', 'gmf');
+        ga('linker:autoLink', ['gasparillamusic.com'] );
+
+        ga('ec:addProduct', {
+          'id': data.saleCode,
+          'name': data.eventName,
+          'quantity': parseInt(dataLayer[0].tixSold)
+        });
+
+        ga('ec:setAction', 'purchase', {
+          'id': data.saleCode,
+          'revenue': dataLayer[0].tixValue
+        });
+
+        ga('gmf.send', 'pageview');
+    });
+}
+    
+</script>
